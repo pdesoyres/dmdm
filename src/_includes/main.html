@@ -7,7 +7,11 @@ description: Céline LEROY - DE SOYRES, Kinésiologue à Nantes et Haute-Goulain
 <!doctype html>
 <html lang="fr">
 <head>
-  {% set fullTitle = {{ title }}{% if showName %} - {{ name }}{% endif %} %}}
+  {% if showName %}
+    {% set fullTitle = title + "-" + name %}
+  {% else %}
+    {% set fullTitle = title + " - Céline LEROY DE SOYRES - Kinésiologue" %}
+  {% endif %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
