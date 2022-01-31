@@ -1,14 +1,27 @@
 ---
 title: Des mains et des mots
 showName: true
+description: Céline LEROY - DE SOYRES, Kinésiologue à Nantes et Haute-Goulaine
 ---
 
 <!doctype html>
 <html lang="fr">
 <head>
+  {% set fullTitle = {{ title }}{% if showName %} - {{ name }}{% endif %} %}}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }}{% if showName %} - {{ name }}{% endif %}</title>
+
+  <meta name="description" content="{{ description }}"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="googlebot" content="index, follow"/>
+  <meta name="bingbot" content="index, follow"/>
+
+  <meta property="og:title" content="{{ fullTitle }}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.desmainsetdesmots.fr"/>
+  <meta property="og:image" content="https://www.desmainsetdesmots.fr/img/index-2.jpg"/>
+
+  <title>{{ fullTitle }}</title>
 
   <style>
       .no-js {
