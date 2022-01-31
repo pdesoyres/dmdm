@@ -1,0 +1,22 @@
+{
+  "name": "dmdm",
+  "version": "1.0.0",
+  "description": "Website for www.desmainsetdesmots.fr",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ENV=dev npx @11ty/eleventy --input='./src' --serve",
+    "start:prod": "ENV=production npx @11ty/eleventy --input='./src' --serve",
+    "build:dev": "ENV=dev npx @11ty/eleventy --input='./src'",
+    "build:prod": "ENV=production npx @11ty/eleventy --input='./src'"
+  },
+  "keywords": [],
+  "author": "Pierre de Soyres",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "clean-css": "^5.2.4",
+    "html-minifier": "^4.0.0",
+    "terser": "^5.10.0",
+    "eleventy-favicon": "^1.1.2"
+  }
+}

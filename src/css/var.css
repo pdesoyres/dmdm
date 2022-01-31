@@ -1,0 +1,24 @@
+/*https://colordesigner.io/#16193B-35478C-4E7AC7-7FB2F0-ADD5F7*/
+:root {
+    --blue: #18757a;
+    --blue-medium: #0e4649;
+    --blue-dark: #072325;
+
+    --yellow: #f6cd30;
+    --yellow-light: #fcf0c1;
+
+    --white-blue: #e1f8f9;
+    --white-yellow: #fefaea;
+
+    --dark: #020c0c;
+
+
+    --nav-button-size: 1.5rem;
+
+    --radius-small: 3px;
+    --radius-normal: 8px;
+
+    --header-height: 120px;
+    --header-padding: 5px;
+    --header-shadow-size: 3px;
+}

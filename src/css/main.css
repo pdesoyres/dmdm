@@ -1,0 +1,218 @@
+html, body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--blue-dark);
+
+    background-color: var(--white-blue);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/*
+------------- paragraph and links
+*/
+
+p {
+    margin: 0 0 1em;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    text-align: justify;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--white-yellow)
+}
+
+:not(:hover):focus {
+    outline: 2px solid var(--blue-dark);
+}
+
+/*
+------------- titles
+*/
+
+
+h1 {
+    font-family: 'Shadows Into Light Two', cursive;
+    color: var(--blue-medium);
+
+    font-size: 3.2em;
+    line-height: 1.2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Shadows Into Light Two', cursive;
+    color: var(--yellow);
+    background-color: var(--blue);
+
+    font-size: 2em;
+}
+
+h2:before {
+    content: "★";
+    padding-right: 3px;
+}
+
+h3 {
+    color: var(--white-yellow);
+
+    font-size: 1.3em;
+    letter-spacing: 0.1em;
+
+    line-height: 1.4em;
+    margin: 0 0 .4em;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    background-color: var(--white-yellow);
+    margin-top: calc(var(--header-height) + var(--header-padding) * 2 + var(--header-shadow-size));
+}
+
+/*
+------------- section
+*/
+
+section {
+    background-color: var(--blue);
+    margin-top: 1.8em;
+    padding: 10px;
+}
+section:first-child {
+    margin-top: 0;
+}
+section:last-child {
+    margin-bottom: 0.8em;
+}
+section.margin {
+    margin-top: 1.8em;
+}
+
+section > .content {
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-top: 5px;
+    color: var(--white-yellow);
+    border-left: 3px solid var(--yellow);
+    margin-left: 12px;
+}
+
+section > .image {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+section > .image > img {
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 1370px) {
+    section {
+        display: grid;
+        grid-template-rows: max-content 1fr;
+        grid-template-columns: 35% 1fr;
+    }
+
+    section > .image {
+        grid-row: span 2;
+        align-self: center;
+        margin-bottom: 0;
+    }
+
+    section > .content {
+        justify-self: start;
+    }
+
+    section:nth-child(odd) {
+        grid-template-columns: 1fr 35%;
+    }
+
+    section:nth-child(odd) > .image {
+        grid-column: 2;
+    }
+
+    section:nth-child(odd) > h2 {
+        grid-row: 1;
+    }
+
+    section:nth-child(odd) > .content {
+        grid-row: 2;
+        padding-right: 10px;
+    }
+
+    section.no-image {
+        display: block;
+    }
+}
+
+/*
+------------- footer
+*/
+
+footer {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    background-color: var(--blue);
+    border-top: 5px solid var(--yellow);
+    color: var(--white-blue);
+    padding: 10px;
+}
+
+/*
+------------- icon_link
+*/
+
+.icon_link {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: center;
+    color: var(--yellow);
+}
+
+.icon_link svg {
+    fill: var(--yellow);
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+}
+
+.icon_link svg path {
+    fill: var(--yellow);
+}
+
+
+.icon_text {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: center;
+    color: var(--white-yellow);
+}
+
+.icon_text svg {
+    fill: var(--white-yellow);
+    height: 20px;
+    width: 20px;
+    margin-right: 3px;
+}
+
+.icon_text svg path {
+    fill: var(--white-yellow);
+}

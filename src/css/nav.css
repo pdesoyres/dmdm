@@ -1,0 +1,114 @@
+
+nav {
+    display: grid;
+    /*padding: 1.5em 0.5em 0;*/
+    padding-bottom: 0.5em;
+    align-self: end;
+    justify-items: end;
+}
+
+/* nav button */
+nav > button {
+    display: grid;
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+    background-color: var(--white-blue);
+
+    height: calc(var(--nav-button-size) + 2 * 5px);
+    width: calc(var(--nav-button-size) + 2 * 5px);
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+}
+
+nav > button > svg {
+    height: var(--nav-button-size);
+    width: var(--nav-button-size);
+    fill: var(--dark);
+}
+
+nav > button:hover {
+    cursor: pointer;
+}
+
+nav > button:hover > svg {
+    fill: var(--white-blue);
+}
+nav > button:hover {
+    background-color: var(--blue-dark);
+    transition: background-color 100ms ease-in-out ;
+}
+
+nav ul {
+    position: absolute;
+    right: 0;
+    margin-top: calc((var(--nav-button-size) + 2 * 5px + 2px));
+    list-style: none;
+    background: var(--blue);
+}
+
+nav li {
+    height: 0;
+    overflow: hidden;
+    transition: all 50ms;
+    white-space: nowrap;
+}
+
+nav > ul[aria-hidden="false"] > li {
+    height: calc(2em + 1px);
+}
+
+nav li a {
+    display: block;
+    padding: 0 20px;
+    color: var(--white-blue);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: 1px solid var(--blue-dark);
+}
+
+nav li:last-child a {
+    border-bottom: none;
+}
+
+nav li a:hover,
+nav li a:focus,
+nav li[aria-current="page"] a {
+    color: var(--blue-dark);
+    background: var(--white-blue);
+    transition: background-color 100ms ease-in-out
+}
+
+
+@media screen and (min-width: 1370px) {
+    nav {
+        position: unset;
+        align-self: end;
+    }
+
+    nav > button {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        position: unset;
+        margin-top: 0;
+    }
+
+    nav li {
+        height: 2em;
+        transition: none;
+        margin: 0 3px;
+    }
+
+    nav li a {
+        border: none;
+        padding: 0 10px;
+        border-radius: var(--radius-small);
+    }
+}
