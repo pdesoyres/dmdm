@@ -16,7 +16,6 @@ p {
     margin: 0 0 1em;
     font-size: 1.2em;
     line-height: 1.2em;
-    text-align: justify;
 }
 
 strong {
@@ -159,6 +158,12 @@ section > .image > img {
 
     section.no-image {
         display: block;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    p {
+        text-align: justify;
     }
 }
 
