@@ -9,5 +9,5 @@ const googleMapUrl = (lat, long) => {
     return `geo:${lat},${long}`
   }
 
-  return `https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=${lat},${long}`;
+  return `https://maps.google.com/maps?z=12&t=m&q=loc:${lat}+${long}`;
 }
