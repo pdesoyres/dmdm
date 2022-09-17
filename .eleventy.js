@@ -4,8 +4,6 @@ const jsMinifier = require("./build/jsMinifier");
 const faviconPlugin = require("eleventy-favicon");
 
 module.exports = function(eleventyConfig) {
-  //’
-
   // favicon
   eleventyConfig.addPlugin(faviconPlugin);
 
