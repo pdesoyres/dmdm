@@ -7,6 +7,12 @@ nav {
     justify-items: end;
 }
 
+nav {
+    position: absolute;
+    left: 0;
+    padding-left: 0.5em;
+}
+
 /* nav button */
 nav > button {
     display: grid;
@@ -41,7 +47,7 @@ nav > button:hover {
 
 nav ul {
     position: absolute;
-    right: 0;
+    left: 0;
     margin-top: calc((var(--nav-button-size) + 2 * 5px + 2px));
     list-style: none;
     background: var(--blue);
@@ -84,7 +90,7 @@ nav li[aria-current="page"] a {
 }
 
 
-@media screen and (min-width: 1370px) {
+@media screen and (min-width: 1200px) {
     nav {
         position: unset;
         align-self: end;
