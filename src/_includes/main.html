@@ -59,14 +59,13 @@ description: Céline LEROY - DE SOYRES, Kinésiologue à Nantes et Vertou. Sophr
 
   <!-- Scripts -->
   {% set js %}
-    {% include "../script/fouc.js" %}
     {% include "../script/menu.js" %}
   {% endset %}
   <script>
     {{ js | jsmin | safe }}
   </script>
 </head>
-<body style="visibility: hidden;" class="no-js">
+<body class="no-js">
   <script>
     document.querySelector('body').classList.remove('no-js');
   </script>
