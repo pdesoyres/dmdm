@@ -2,7 +2,7 @@
 layout: main.html
 name: Contact
 tags: pages
-order: 5
+order: 6
 ---
 
 <section class="no-image">
@@ -56,6 +56,22 @@ order: 5
 </section>
 
 <section class="no-image">
+  <h2>Basse-Goulaine</h2>
+  <div class="content">
+    <p>Je vous accueille à Basse-Goulaine les jeudis.</p>
+
+    <p>
+      <a id="nav_to_bassegoulaine" class="icon_link" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.98,0c-3.87,0-7,2.98-7,6.67c0,3.68,7,13.33,7,13.33s7-9.65,7-13.33C16.98,2.99,13.84,0,9.98,0z M9.98,10c-1.66,0-3-1.34-3-3s1.34-3,3-3s3,1.34,3,3S11.64,10,9.98,10z"/>
+        </svg>
+        <span>So adapt’,<br/>43 rue du Moulin Soline,<br/>44115 BASSE-GOULAINE</span>
+      </a>
+    </p>
+  </div>
+</section>
+
+<section class="no-image">
   <h2>Haute-Goulaine</h2>
   <div class="content">
     <p>Je me déplace à votre domicile pour des séances de sophrologie.</p>
@@ -64,5 +80,6 @@ order: 5
 
 <script src="/script/mobile.js"></script>
 <script>
-  document.getElementById('nav_to_vertou').href = googleMapUrl('47.17021823360577', -'1.4870194885530503');
+  document.getElementById('nav_to_vertou').href = googleMapUrl(47.17021823360577, -1.4870194885530503);
+  document.getElementById('nav_to_bassegoulaine').href = googleMapUrl(47.214955166771105, -1.4611927084129146);
 </script>
